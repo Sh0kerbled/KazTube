@@ -1,40 +1,59 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.responses import StreamingResponse
-import os
-import aiofiles
+from fastapi import FastAPI, HTTPException, Response, Depends
+from authx import AuthX, AuthXConfig
+from pydantic import BaseModel
+from typing import Dict
 
+# Создаем приложение FastAPI
 app = FastAPI()
 
-directory = "D:/Games/project/AA/video"
+# Настраиваем конфигурацию AuthX
+config = AuthXConfig()
+config.JWT_SECRET_KEY = "SECRET_KEY"
+config.JWT_ACCESS_CSRF_COOKIE_NAME = "my_access_token"
+config.JWT_ACCESS_COOKIE_NAME = "access_token"
+config.JWT_TOKEN_LOCATION = ["cookies"]
 
-def get_video_list():
-    return [{"id": idx, "name": file} for idx, file in enumerate(os.listdir(directory))]
+# Инициализируем AuthX с конфигурацией
+security = AuthX(config=config)
 
-video_list = get_video_list()
+# Временное хранилище пользователей
+users_db: Dict[str, str] = {}  # username: password
 
-@app.get("/videos")
-async def list_videos():
-    return video_list
+# Модели запросов
+class UserRegisterSchema(BaseModel):
+    username: str
+    password: str
 
-# files = os.listdir(directory)
+class UserLoginSchema(BaseModel):
+    username: str
+    password: str
 
-# videoList = [
-#     files
-# ]
+@app.post("/register")
+def register(user: UserRegisterSchema):
+    if user.username in users_db:
+        raise HTTPException(status_code=400, detail="User already exists")
+    
+    # Сохраняем пользователя в базу данных
+    users_db[user.username] = user.password
+    return {"message": "User registered successfully"}
 
-# @app.get("/test")
-# async def test():
-#     return files
+@app.post("/login")
+def login(creds: UserLoginSchema, response: Response):
+    # Проверка существования пользователя
+    if creds.username not in users_db or users_db[creds.username] != creds.password:
+        raise HTTPException(status_code=401, detail="Incorrect username or password")
+    
+    # Создаем JWT токен
+    token = security.create_access_token(uid=creds.username)
+    # Устанавливаем токен в cookies
+    response.set_cookie(
+        key=config.JWT_ACCESS_COOKIE_NAME, 
+        value=token, 
+        httponly=True,
+        samesite="Lax"
+    )
+    return {"access_token": token}
 
-# @app.get("/sosal")
-# async def test() -> list:
-#     return videoList
-
-# @app.get("/sosal/{id}")
-# async def test(id: int) -> dict:
-#     for video in videoList:
-#         if video['id'] == id:
-#             return video
-        
-#     raise HTTPException(status_code=404,detail="video not found")
-
+@app.get("/protected")
+def protected_route(user=Depends(security.get_current_subject)):
+    return {"message": f"Welcome, {user.uid}!"}

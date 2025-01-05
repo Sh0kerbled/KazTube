@@ -16,13 +16,18 @@ body {
 
 .header-catalog {
     display: flex;
+    justify-content: space-between;
     margin: 20px 10px 20px;
     gap: 10px;
 }
 
 .Logo img {
     border-radius: 20px;
-    width: 200px;
+    width: 150px;
+}
+
+.user-logo img {
+    width: 45px;
 }
 
 .wrapper-catalog {

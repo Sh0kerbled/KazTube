@@ -1,0 +1,528 @@
+body {
+    background-color: rgb(109, 109, 109);
+    margin: 0;
+    padding: 0;
+
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    #signup {
+        width: 0;
+        height: 0;
+    }
+
+    .frame8 p {
+        font-size: 16px
+    }
+
+    .frame8 p:first-child {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+
+    .frame8 {
+        font-family: 'poppins';
+        font-style: normal;
+    }
+
+    .frame8 p:last-child {
+        margin-top: 0;
+    }
+
+    .frame8 p a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .form-value {
+        width: 366px;
+        position: absolute;
+        left: 25px;
+        top: 0;
+    }
+
+    .inputbox {
+
+        margin-bottom: 30px;
+
+    }
+
+    .inputbox input {
+        width: 360px;
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-family: poppins;
+        font-size: 16px;
+    }
+
+    .hide {
+        position: absolute;
+        left: 290px;
+        top: 285px;
+        font-family: poppins;
+    }
+
+    .hide p {
+        position: absolute;
+        left: 35px;
+        top: -16px;
+    }
+
+    .hide img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .passwrod-rules {
+        width: 387px;
+        height: 74px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+    }
+
+    .passwrod-rules span {
+        font-size: 11.5px;
+    }
+
+    .passwrod-rules li {
+        margin-right: 30px;
+        margin-bottom: 0;
+    }
+
+    .passwrod-rules ul {
+        padding: 0;
+        margin-left: 20px;
+
+    }
+
+    .passwrod-rules ul li:not {
+        margin-top: 10px;
+    }
+
+    .privacy {
+        width: 360px;
+        margin-top: 20px;
+        font-size: 12px;
+    }
+
+    .createacc {
+        width: 256px;
+        height: 64px;
+        border-radius: 50px;
+        background: gray;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        line-height: 60px;
+        margin-top: 30px;
+        position: relative;
+        top: -20px;
+        left: 50px;
+        font-family: poppins;
+        font-size: 16px;
+        transition: 0.2s;
+        border: none;
+    }
+
+    .button2 {
+        color: black;
+        font-size: 16px;
+        font-family: poppins;
+    }
+
+    .createacc:hover {
+        background: #0038FF;
+    }
+
+    .createacc:active {
+        background: #0030db;
+    }
+
+    .register {
+        position: relative;
+        width: 265px;
+        height: 0;
+        left: 50px;
+        margin-top: -10px;
+    }
+
+    p {
+        font-family: 'poppins';
+        margin-bottom: 5px;
+    }
+
+    .agree {
+        width: 366px;
+        margin-top: 10px;
+        font-family: poppins;
+        font-size: 14px;
+    }
+
+    .agree p {
+        margin-left: 25px;
+        margin-top: -25px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    #signup {
+        width: 0;
+        height: 0;
+    }
+
+    .frame8 p {
+        font-size: 16px
+    }
+
+    .frame8 p:first-child {
+        font-size: 34px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .frame8 {
+        font-family: 'poppins';
+        font-style: normal;
+    }
+
+    .frame8 p:last-child {
+        margin-top: 0;
+    }
+
+    .frame8 p a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .form-value {
+        width: 560px;
+        position: absolute;
+        left: 25px;
+        top: 0;
+    }
+
+    .image {
+        position: absolute;
+        left: 573px;
+        top: -125px;
+        width: 425px;
+        height: 983px;
+        background: url(/images/loginLogo.png)
+    }
+
+    .inputbox {
+
+        margin-bottom: 35px;
+
+    }
+
+    .inputbox input {
+        width: 545px;
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-family: poppins;
+        font-size: 16px;
+    }
+
+    .hide {
+        position: absolute;
+        left: 475px;
+        top: 363px;
+        font-family: poppins;
+    }
+
+    .hide p {
+        position: absolute;
+        left: 35px;
+        top: -16px;
+    }
+
+    .hide img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .passwrod-rules {
+        width: 545px;
+        height: 74px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+    }
+
+    .passwrod-rules span {
+        font-size: 17px;
+        font-size: 14px;
+    }
+
+    .passwrod-rules li {
+        margin-right: 30px;
+        margin-bottom: 10px;
+    }
+
+    .passwrod-rules ul {
+        padding: 0;
+        margin-left: 20PX;
+
+    }
+
+    .passwrod-rules ul li:not {
+        margin-top: 10px;
+    }
+
+    .privacy {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+
+    .createacc {
+        width: 256px;
+        height: 64px;
+        border-radius: 50px;
+        background: gray;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        line-height: 60px;
+        margin-top: 30px;
+        position: relative;
+        left: 150px;
+        font-family: poppins;
+        font-size: 16px;
+        transition: 0.2s;
+        border: none;
+    }
+
+    .button2 {
+        color: black;
+        font-size: 16px;
+        font-family: poppins;
+    }
+
+    .createacc:hover {
+        background: #0038FF;
+    }
+
+    .createacc:active {
+        background: #0030db;
+    }
+
+    .register {
+        position: relative;
+        width: 265px;
+        left: 145px;
+    }
+
+    p {
+        font-family: 'poppins';
+        margin-bottom: 5px;
+    }
+
+    .agree {
+        width: 545px;
+        height: 40;
+        margin-top: -20px;
+        font-family: poppins;
+        font-size: 16px;
+    }
+
+    .agree p {
+        margin-left: 25px;
+        margin-top: -25px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    #signup {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .frame8 p:first-child {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .frame8 {
+        font-family: 'poppins';
+        font-style: normal;
+    }
+
+    .frame8 p:last-child {
+        margin-top: 0;
+    }
+
+    .frame8 p a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .form-value {
+        position: absolute;
+        left: 350px;
+        top: 70px;
+    }
+
+    .inputbox {
+        margin-bottom: 35px;
+
+    }
+
+    .inputbox img {
+        position: absolute;
+        left: 600px;
+        top: 323px;
+    }
+
+    .inputbox input {
+        width: 665px;
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-family: poppins;
+        font-size: 16px;
+    }
+
+    .hide {
+        position: absolute;
+        left: 595px;
+        top: 350px;
+        font-family: poppins;
+    }
+
+    .hide p {
+        position: absolute;
+        left: 35px;
+        top: -16px;
+    }
+
+    .hide img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .passwrod-rules {
+        width: 665px;
+        height: 74px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+    }
+
+    .passwrod-rules span {
+        font-size: 17px;
+        font-size: 14px;
+    }
+
+    .passwrod-rules li {
+        margin-right: 30px;
+        margin-bottom: 10px;
+    }
+
+    .passwrod-rules ul {
+        padding: 0;
+        margin-left: 20PX;
+
+    }
+
+    .passwrod-rules ul li:not {
+        margin-top: 10px;
+    }
+
+    .privacy {
+        margin-top: 40px;
+    }
+
+    .createacc {
+        width: 256px;
+        height: 64px;
+        border-radius: 50px;
+        background: gray;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        line-height: 60px;
+        margin-top: 30px;
+        position: relative;
+        font-family: poppins;
+        font-size: 16px;
+        transition: 0.2s;
+        border: none;
+    }
+
+    .button2 {
+        color: black;
+        font-size: 16px;
+        font-family: poppins;
+    }
+
+    .createacc:hover {
+        background: #0038FF;
+    }
+
+    .createacc:active {
+        background: #0030db;
+    }
+
+    .image {
+        position: absolute;
+        left: 973px;
+        top: -125px;
+        width: 597px;
+        height: 1000px;
+        background: url(/images/loginLogo.png);
+    }
+
+    p {
+        font-family: 'poppins';
+        margin-bottom: 5px;
+    }
+
+    .agree {
+        width: 600px;
+        height: 40;
+        margin-top: -20px;
+        font-family: poppins;
+        font-size: 16px;
+    }
+
+    .agree p {
+        margin-left: 25px;
+        margin-top: -25px;
+    }
+}
