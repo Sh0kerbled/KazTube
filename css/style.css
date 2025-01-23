@@ -1,4 +1,14 @@
-html,
+
+
+/* body {
+    background: linear-gradient(125deg,
+            rgba(31, 14, 57, 1) 04%,
+            rgba(8, 1, 19, 1) 57%,
+            rgba(0, 29, 86, 1) 100%);
+} */
+
+@media (min-width: 1440px) {
+    html,
 body {
     margin: 0;
     padding: 0;
@@ -7,12 +17,7 @@ body {
     position: relative;
 }
 
-/* body {
-    background: linear-gradient(125deg,
-            rgba(31, 14, 57, 1) 04%,
-            rgba(8, 1, 19, 1) 57%,
-            rgba(0, 29, 86, 1) 100%);
-} */
+
 
 .header-catalog {
     display: flex;
@@ -97,4 +102,125 @@ body {
 .video_item a {
     color: black;
     text-decoration: none;
+}
+}
+
+@media (min-width: 1024px) and (max-width: 1440px){
+
+    html,
+body {
+    margin: 0;
+    padding: 0;
+        overflow-x: hidden;
+    position: relative;
+}
+
+.categories{
+    width: 180px;    
+    height: 0;
+    margin-left: 12px;
+    display: grid;
+    gap: 10px;
+    z-index: -1;
+    position: sticky;
+    top: 20px;
+}
+
+.categories a{
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+header{
+    position: sticky;
+    top: 2px;
+}
+.header-catalog {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px 20px;
+    gap: 10px;
+}
+
+.Logo img {
+    border-radius: 20px;
+    width: 150px;
+}
+
+.user-logo img {
+    width: 45px;
+}
+
+.wrapper-catalog {
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 100%;
+    gap: 10px;  
+    padding-left: 205px;
+}
+
+.video_item {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 300px;
+    flex-shrink: 0;
+    margin: 10px 10px 40px;
+    width: 25%;
+}
+
+.video_item img {
+    width: 348px;
+    height: 195px;
+    border-radius: 10px;
+}
+
+.bottom-info {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right-info {
+    margin-left: 10px;
+}
+
+.heading {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.name_channel {
+    margin-top: 5px;
+    color: #AAAAAA;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.left-info img {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+.vitime {
+    display: flex;
+    margin-left: 45px;
+    color: #AAAAAA;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.vitime span {
+    margin: 0 5px;
+}
+
+.video_item a {
+    color: black;
+    text-decoration: none;
+}
 }
