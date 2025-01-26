@@ -507,7 +507,12 @@ body {
     .image {
         position: absolute;
         left: 719px;
-        top: 30px;
+        top: 22px;
+    }
+
+    .image img{
+        width: 597px;
+        height: 650px;
     }
 
     p {
