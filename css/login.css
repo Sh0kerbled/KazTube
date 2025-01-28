@@ -5,7 +5,7 @@ body {
 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 576px) {
     body {
         background-color: white;
         margin: 0;
@@ -175,7 +175,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
     body {
         background-color: white;
         margin: 0;
@@ -352,7 +352,192 @@ body {
     }
 }
 
-@media only screen and (min-width: 1025px) {
+@media (min-width: 1024px) and (max-width: 1440px) {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #signup {
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .frame8 p:first-child {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .frame8 {
+        font-family: 'poppins';
+        font-style: normal;
+    }
+
+    .frame8 p:last-child {
+        margin-top: 0;
+    }
+
+    .frame8 p a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .form-value {
+        position: absolute;
+        left: 50px;
+        top: -30px;
+    }
+
+    .inputbox {
+        margin-bottom: 5px;
+
+    }
+
+    .inputbox img {
+        position: absolute;
+        left: 600px;
+        top: 323px;
+    }
+
+    .inputbox input {
+        width: 665px;
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-family: poppins;
+        font-size: 16px;
+        padding-left: 12px;
+    }
+
+    .hide {
+        position: absolute;
+        left: 595px;
+        top: 350px;
+        font-family: poppins;
+    }
+
+    .hide p {
+        position: absolute;
+        left: 35px;
+        top: -16px;
+    }
+
+    .hide img {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+    }
+
+    .passwrod-rules {
+        position: absolute; 
+        width: 665px;
+        height: 74px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-family: poppins;
+        visibility:hidden;
+        z-index: -1;
+    }
+
+    .passwrod-rules span {
+        font-size: 17px;
+        font-size: 14px;
+    }
+
+    .passwrod-rules li {
+        margin-right: 30px;
+        margin-bottom: 0px;
+    }
+
+    .passwrod-rules ul {
+        padding: 0;
+        margin-left: 20PX;
+
+    }
+
+    .passwrod-rules ul li:not {
+        margin-top: 0px;
+    }
+
+    .privacy {
+        margin-top:   0px;
+    }
+
+    .createacc {
+        width: 256px;
+        height: 64px;
+        border-radius: 50px;
+        background: gray;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        line-height: 60px;
+        margin-top: 1   0px;
+        position: relative;
+        font-family: poppins;
+        font-size: 16px;
+        transition: 0.2s;
+        border: none;
+    }
+
+    .button2 {
+        color: black;
+        font-size: 16px;
+        font-family: poppins;
+    }
+
+    .createacc:hover {
+        background: #0038FF;
+    }
+
+    .createacc:active {
+        background: #0030db;
+    }
+
+    .image {
+        position: absolute;
+        left: 719px;
+        top: 22px;
+    }
+
+    .image img{
+        width: 597px;
+        height: 650px;
+    }
+
+    p {
+        font-family: 'poppins';
+    }
+
+    .agree {
+        width: 600px;
+        height: 40;
+        margin-top: 20px;
+        font-family: poppins;
+        font-size: 16px;
+    }
+
+    .agree p {
+        margin-left: 25px;
+        margin-top: -25px;
+    }
+
+    .register {
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
 
     body {
         background-color: white;
